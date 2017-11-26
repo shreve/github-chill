@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-sass --sourcemap=none github-dark.sass github-dark.min.css
+sass --sourcemap=none github-chill-wrap.scss github-chill.min.css
 
-cat github-dark.min.css | xclip -sel clipboard
+xclip -sel clipboard < github-chill.min.css

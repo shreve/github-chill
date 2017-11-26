@@ -1,0 +1,6 @@
+@-moz-document domain("render.githubusercontent.com"),
+               domain("raw.githubusercontent.com"),
+               domain("github.com"),
+               regexp("^https?://((gist|guides|help|raw|status|developer).)?github.com((?!generated_pages/preview).)*$") {
+  @import "github-chill";
+}
