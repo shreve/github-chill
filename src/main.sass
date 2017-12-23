@@ -587,8 +587,12 @@ table.files
   .user
     color: $black
 
-.tabnav-tab.selected
-  background-color: $slate
+.tabnav-tab
+  &.selected
+    background-color: $slate
+
+  &:hover, &:focus
+    color: inherit
 
 .tabnav-pr
   .tabnav-tab.selected
@@ -768,7 +772,11 @@ timeline-comment::before
 a.Box-row-link.h4.js-navigation-open
   color: #4078c0
 
-.branch-summary, .branch-group-heading + .branch-summary, .branch-summary
+.branch-summary,
+.branch-summary:last-child,
+.branch-group-heading + .branch-summary
+  border-color: $border
+
   border-color: $border
 
 .branch-a-b-count
@@ -783,8 +791,6 @@ a.Box-row-link.h4.js-navigation-open
   &.count-ahead
     color: #52bd58
 
-a.branch-name
-  color: inherit
 
 .table-of-contents li + li, .commit-desc + .commit-branches
   border-color: $border
