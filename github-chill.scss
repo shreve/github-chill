@@ -1,0 +1,11 @@
+@-moz-document domain("render.githubusercontent.com"),
+               domain("raw.githubusercontent.com"),
+               domain("github.com"),
+               domain("gist.github.com"),
+               domain("guides.github.com"),
+               domain("help.github.com"),
+               domain("raw.github.com"),
+               domain("status.github.com"),
+               domain("developer.github.com") {
+  @import "src/github-chill";
+}
