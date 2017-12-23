@@ -1,0 +1,44 @@
+.blob-code-addition,
+.blob-code-deletion
+  .x
+    background-color: inherit
+    color: inherit
+    border-bottom: 1px solid black
+
+// The entire line of additions in diffs
+.blob-code-addition
+  background-color: $dark-lime
+
+  // In-line specifics of what's changed
+  .x
+    border-color: $lime
+
+// The background and line number for deletions in diffs
+.blob-code-deletion
+  background-color: $dark-red
+
+  // In-line specifics of what's changed
+  .x
+    border-color: $red
+
+.blob-code-inner
+  color: #6d6d72
+
+.blob-num
+  color: $grey
+  border-color: $border
+
+  &:hover
+    color: inherit
+
+.blob-num-deletion
+  background-color: $red
+
+.blob-num-addition
+  background-color: $lime
+
+
+// Icon used for placeholding long diffs
+.d-block
+  .js-diff-placeholder
+    fill: $slate
