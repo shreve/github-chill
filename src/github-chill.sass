@@ -1053,8 +1053,14 @@ hr, .rule
 .border-gray-dark
   border-color: #304251 !important
 
-.underline-nav-item.selected
-  color: $white
+.UnderlineNav-item
+  &.selected
+    color: $white
+  &:hover
+    color: inherit
+
+    .Counter
+      color: inherit
 
 .user-profile-sticky-bar::after
   background-color: #243447
