@@ -1601,3 +1601,17 @@ a.branch-name, a.more-branches
 .select-menu-item + .semantic-toc-file::after
   background-color: $light-slate
   border-color: $light-slate
+
+.tree-browser
+  border-color: $border !important
+
+  td
+    background-color: $slate
+    border-color: $border
+
+    &:first-child,
+    &:last-child
+      border-color: $border
+
+  tr.navigation-focus td
+    background-color: $light-slate
