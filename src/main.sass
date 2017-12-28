@@ -983,8 +983,19 @@ line.axis
 table.capped-list
   td, th
     border-color: $border
-  tr:nth-child(even)
+    color: $text
+
+  tr:nth-child(odd)
     background-color: $light-slate
+
+  tr:nth-child(even)
+    background-color: $slate
+
+  thead th
+    background-color: $slate
+
+  .octicon-file-text
+    color: $white
 
 .code-frequency
   .addition
@@ -1438,14 +1449,19 @@ li.session-device
 .Box
   background: none !important
   border-color: $border
+
+  .Box-header
+    background-color: inherit
+    border-color: inherit
+
+  .Box-header--blue
+    background-color: $light-slate
+
   .Box-row
     .listgroup-item-body
       color: $light-text !important
     .listgroup-item-title
       opacity: .85
-
-.Box-header--blue
-  background-color: $light-slate
 
 .simple .title a:first-child, .body .title a:first-child, .public .author a, .owner
   color: #00aba5 !important
@@ -1556,7 +1572,8 @@ tr:not(.blob-expanded) + .blob-expanded
 .file-diff-split .blob-code + .blob-num
   border-left: 1px solid $light-slate
 
-.octicon-shield
+.octicon-shield,
+.octicon-lock
   color: $white
 
 a.branch-name, a.more-branches
