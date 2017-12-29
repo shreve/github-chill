@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
-sass --sourcemap=none --style compressed github-chill.scss github-chill.min.css
+function compile() {
+    sass --sourcemap=none --style compressed github-chill.scss github-chill.min.css
 
-xclip -sel clipboard < github-chill.min.css
+    xclip -sel clipboard < github-chill.min.css
+
+    echo "Compiled $(date)"
+}
+
+inotifywait -m -q -e close_write -r src |
+    while read -r; do
+        compile
+    done
